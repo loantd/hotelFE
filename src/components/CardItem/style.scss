@@ -10,13 +10,13 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
   transition: 0.5s ease;
-  cursor: pointer;
 
   .card-image {
     grid-area: image;
   }
   .card-text {
     grid-area: text;
+    cursor: pointer;
   }
 
   .card-text p {
