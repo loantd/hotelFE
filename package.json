@@ -2,6 +2,10 @@
   "name": "hotel",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.7.1",
+    "node": "10.x"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -22,8 +26,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start ",
+    "build": "react-scripts build nodenv --env common/configs/env/dev.json --exec \"npm run build\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
