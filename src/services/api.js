@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { AppConfigs } from "../common";
-
 /**
  * Get Root Link from env config
  * @param {string} apiType
@@ -9,7 +7,7 @@ import { AppConfigs } from "../common";
  * @returns {string}
  */
 const getRootLink = (apiType, isAuthorized) => {
-  return AppConfigs.getApiEndpoint();
+  return "https://backendhotel.herokuapp.com/";
 };
 
 /**
