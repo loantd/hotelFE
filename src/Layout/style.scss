@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  .container-body {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

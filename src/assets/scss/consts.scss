@@ -1,0 +1,96 @@
+$primary-color: #edb756;
+$secondary-color: #e9b14e;
+$title-text-color: #4a4a4a;
+$sub-title-text-color: #929292;
+$description-text-color: #c4c4c4;
+$content-text-color: #424242;
+$inner-background-color: #fefefe;
+$outer-background-color: #e5e5e5;
+$dashboard-background-color: #f9f9f9;
+$card-border-color: #f9f9f9;
+$tag-background-color: #f7f4ee;
+$section-divider: #e8e8e8;
+$border-color: #e7e7e7;
+$screen-background-color: #f6f4ee;
+$main-background-color: #f9f9f9;
+$item-divider: #c3c3c3;
+$border-color-chat: #ededed;
+$chat-text: #9d9d9d;
+$placeholder-color: #c3c3c3;
+$conversation-active-color: fade_out(#f7f7f7, 0.35);
+$action-button-color: #9d9d9d;
+$read-only-input-color: #f4f4f4;
+$hover-color: fade_out(#f3f3f3, 0.35);
+$home-background-color: #f9f7f4;
+$orange-color: #f1ca85;
+$border-color-avatar: #f1ce90;
+$gray-color: #808080;
+$trail-color: #f9ddac;
+$voucher-background-color: #fffcf8;
+$color-text-footer: #dadada;
+$block-background-color: rgba(128, 128, 128, 0.4);
+
+$fanpage-card-width: 203px;
+
+$drop-mode-padding: 2px;
+$assign-role-list-padding-drop-mode: 17px 18px 0 16px;
+
+@mixin text_light {
+  font-weight: 200;
+  font-style: normal;
+}
+
+@mixin text_regular_italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin text_bold_italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin text_light_italic {
+  font-weight: 200;
+  font-style: italic;
+}
+
+@mixin text_bold {
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin text_heavy_italic {
+  font-weight: 900;
+  font-style: italic;
+}
+
+@mixin text_medium_italic {
+  font-weight: 500;
+  font-style: italic;
+}
+
+@mixin text_regular {
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin text_heavy {
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin text_semibold {
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin text_semibold_italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+@mixin text_medium {
+  font-weight: 500;
+  font-style: normal;
+}

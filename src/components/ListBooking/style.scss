@@ -1,0 +1,70 @@
+.booking-item {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  .left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1890ff;
+  }
+  .right-content {
+    padding: 10px;
+    max-height: 200px;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 10px;
+    .top-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-content: center;
+      justify-items: center;
+      .bed-person {
+        font-size: 14px;
+        &.title {
+          font-weight: 700;
+        }
+      }
+    }
+    .body-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-content: center;
+      justify-items: center;
+      .column {
+        display: grid;
+        grid-gap: 20px;
+        .item {
+          font-size: 14px;
+          line-height: 20px;
+          &.free {
+            color: rgb(0, 166, 81);
+            white-space: normal;
+            font-weight: 500;
+          }
+          &.not {
+            color: #8f8f8f;
+          }
+          &.price {
+            color: rgb(249, 109, 1);
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .button {
+            width: 100px;
+            height: 32px;
+            background: #1890ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

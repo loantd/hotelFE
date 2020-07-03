@@ -1,0 +1,9 @@
+@import "../../assets//scss/consts.scss";
+
+.app-card-content {
+  background: $inner-background-color;
+
+  box-sizing: border-box;
+  box-shadow: 2px 4px 20px rgba(74, 74, 74, 0.08);
+  border-radius: 4px;
+}

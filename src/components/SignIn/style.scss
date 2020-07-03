@@ -1,0 +1,95 @@
+@import "../../assets/scss/consts.scss";
+
+.sign-in {
+  width: 466px;
+
+  &-content {
+    padding: 24px 40px;
+
+    &-form {
+      &-forgot {
+        float: right;
+
+        font-size: 14px;
+        text-decoration-line: underline;
+
+        @include text_regular;
+        color: $title-text-color;
+
+        &:hover {
+          text-decoration-line: underline;
+          color: $title-text-color;
+        }
+      }
+    }
+
+    &-button {
+      width: 202px;
+      height: 40px;
+
+      margin: 24px auto auto;
+    }
+
+    &-register {
+      line-height: 18px;
+      font-size: 14px;
+
+      margin: 235px auto 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        cursor: pointer;
+      }
+
+      user-select: none;
+
+      @include text_regular;
+      color: $title-text-color;
+
+      &-link {
+        color: $title-text-color;
+        text-decoration: underline;
+
+        margin-left: 3px;
+
+        @include text_semibold;
+      }
+    }
+  }
+
+  &-outlet-owner {
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: space-around;
+
+    &-title {
+      line-height: 18px;
+      font-size: 14px;
+
+      @include text_regular;
+      color: $title-text-color;
+    }
+
+    &-button {
+      line-height: 18px;
+      font-size: 14px;
+      text-decoration: underline;
+
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        margin-right: 6px;
+      }
+
+      @include text_semibold;
+      color: #3b5998;
+    }
+  }
+}

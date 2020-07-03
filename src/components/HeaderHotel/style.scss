@@ -1,0 +1,42 @@
+.container-header {
+  background: #32486a;
+  min-height: 70px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  justify-content: space-between;
+  align-content: center;
+  .header-logo {
+    cursor: pointer;
+    margin-left: 100px;
+    img {
+      max-width: 50px;
+      border-radius: 50%;
+    }
+  }
+  .header-action {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    .input-location {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 30px;
+        object-fit: cover;
+      }
+    }
+    .login-action {
+      .button-login {
+        background: #1890ff;
+        width: 80%;
+        padding: 8px;
+        border-radius: 10px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}

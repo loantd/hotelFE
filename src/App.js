@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { Route, Switch, Redirect } from "react-router-dom";
 
-function App() {
+import HomeContainer from "./containers/Home";
+import BookingDetailsContainer from "./containers/BookingDetails";
+import ModalContainer from "./containers/Modal";
+import Layout from "./Layout";
+
+import PrivateRoute from "./components/PrivateRouter";
+import MainRoute from "./routes/index";
+import "antd/dist/antd.css";
+function App({ match }) {
+  const tokenId = localStorage.getItem("token");
+  let isLoggedIn = tokenId !== null ? true : false;
+  const ownerRoutes = (
+    <>
+      <PrivateRoute
+        path={`${match.url}`}
+        isLoggedIn={isLoggedIn}
+        component={MainRoute}
+      />
+    </>
+  );
+  const userGroup = ["user"];
+  const renderRoutesByUserGroup = () => {
+    if (userGroup.includes("user")) {
+      return ownerRoutes;
+    }
+
+    return <Redirect to="/home" />;
+  };
+
+  const app = (
+    <Switch>
+      <Layout isLoggedIn={isLoggedIn}>
+        <Route
+          path="/"
+          exact
+          render={() =>
+            isLoggedIn ? <Redirect to="/home" /> : <Redirect to="/home" />
+          }
+        />
+
+        <Route
+          path="/home"
+          render={(props) => (
+            <HomeContainer {...props} isLoggedIn={isLoggedIn} />
+          )}
+        />
+        <Route
+          path="/hotel/:id"
+          render={(props) => (
+            <BookingDetailsContainer {...props} isLoggedIn={isLoggedIn} />
+          )}
+        />
+        {renderRoutesByUserGroup()}
+      </Layout>
+    </Switch>
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {app}
+      <ModalContainer />
+    </>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    loggingIn: state.reducerAuthentication.loggingIn,
+  };
+};
+
+const connectedApp = connect(mapStateToProps)(App);
+export default withRouter(connectedApp);
